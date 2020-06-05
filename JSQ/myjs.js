@@ -1,12 +1,22 @@
-
 $.getJSON("https://api.covid19api.com/summary",function(data){
 
+    for (let index_2 = 0; index_2 < data.Countries.length; index_2++) {
+        var element = data.Countries[index_2].Country;
+        console.log("<option >"+element+"</option>");
+        $("#country_selector").append("<option >"+element+"</option>");
+        
+        
+    };
     
 
 
         $("#btn3").click(function(){
-            let country_name = $("input").val();
+            let country_name = $("#country_selector").val();
             console.log(country_name);
+
+            
+
+
 
             for (let index = 0; index < data.Countries.length; index++){
                 console.log(country_name + " " + data.Countries[index].Country);
@@ -55,37 +65,5 @@ $.getJSON("https://api.covid19api.com/summary",function(data){
                 
                 
             });
-
-            
-    
-    
-    
-    
-       
            
-           
-
-            
-             
-        
-        
-       
-           
-        
-
-        
-            
-       
-
-    
-    
-    
-    
-/*
-    data.Countries.forEach(land => {
-        console.log(land.Country)
-        
-    });
-*/   
 });
-
