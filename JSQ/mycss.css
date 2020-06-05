@@ -46,3 +46,10 @@ h1{
    
 
 }
+
+
+#myCanvas{
+    width: 50% !important;
+    height: 60% !important;
+   
+}
