@@ -54,7 +54,7 @@ h1{
 .container{
     position: relative;
     
-    padding-top: 150px;
+    padding-top: 100px;
    
 
 }
@@ -63,9 +63,9 @@ h1{
 #myCanvas{
     position:fixed;
     top:30%;
-    right: 0;
-    width: 80% !important;
-    height: 70% !important;
+    right: 7%;
+    width: 70% !important;
+    height: 60% !important;
     
     
     
@@ -179,7 +179,7 @@ $(document).ready(function(){
                                     },
                                     options: {
                                         responsive: true,
-                                        maintainAspectRatio: false,
+                                        maintainAspectRatio: true,
                                         scales: {
                                             yAxes: [{
                                                 ticks: {
@@ -190,6 +190,7 @@ $(document).ready(function(){
                                          
                                     }
                                 });
+        
 
 
     $.getJSON("https://api.covid19api.com/summary",function(data){
@@ -357,4 +358,5 @@ $(document).ready(function(){
     
 </body>
 </html>
+
 
