@@ -74,7 +74,7 @@ h1{
 
 body{
     margin:0;
-    background-color:  rgb(201, 201, 226);
+    background-color:  rgba(142, 175, 129, 0.564);
 }
 
     
@@ -106,11 +106,6 @@ body{
         </div>
 
 
-
-
-
-
-
     </div>
 
     <div class="choice_container">
@@ -134,9 +129,6 @@ body{
             <option>Cumulative</option>
         </select>
         
-
-
-
         
         <div id="search_holder">
 
@@ -151,13 +143,7 @@ body{
 
     <canvas id="myCanvas"></canvas>
 
-
-
-
     <script type="text/javascript">
-
-    
-
     
 $(document).ready(function(){
     let myCanvas = document.getElementById("myCanvas").getContext("2d");
@@ -194,7 +180,6 @@ $(document).ready(function(){
 
 
     $.getJSON("https://api.covid19api.com/summary",function(data){
-
 
     
         for (let index_2 = 0; index_2 < data.Countries.length; index_2++) {
@@ -279,6 +264,8 @@ $(document).ready(function(){
                         $(document).ready(function () {
                             $("#total_rc").text("Total Recovered: "+tr_total_rc);
                         });  
+
+                        //summary done, let's do graph:
                         
                         $.getJSON("https://api.covid19api.com/total/dayone/country/"+country_name.toLowerCase().replace(" ","-") +"/status/"+choice,function(sec_data){
     
@@ -302,16 +289,8 @@ $(document).ready(function(){
                             };
     
                             //console.log(""+xs+" "+ys);
-
                             //console.log(daily_ys);
-                                                        
-
-                         
-                        
                             //console.log("this world: "+sec_data[0].Cases);
-                        
-                        
-                            
                             //console.log("daily lenght: "+daily_ys.length); 
                             //console.log("cumulativelenght: "+ys.length);
 
@@ -335,19 +314,14 @@ $(document).ready(function(){
                            
                             myChart.update();
                         };
-
-
-                        
     
-                        });
+                    });
 
 
-                        break;}
-                };
-                
-                    
-                    
-            });
+                break;}
+            };
+ 
+        });
                
     });
     
@@ -358,5 +332,3 @@ $(document).ready(function(){
     
 </body>
 </html>
-
-
