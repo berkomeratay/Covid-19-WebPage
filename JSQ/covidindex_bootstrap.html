@@ -95,7 +95,6 @@ $(document).ready(function(){
                                             label: 'Total ',
                                             data: [],
                                             pointRadius: 0,
-                                            backgroundColor: "rgb(122, 161, 173)",
                                             borderColor: "rgb(47, 72, 234)",
                                                 
                                             borderWidth: 1
@@ -236,8 +235,7 @@ $(document).ready(function(){
                         if (hist_choice == "daily") {
                             myChart.data.labels = xs;
                             myChart.data.datasets[0].data = daily_ys;
-                            myChart.data.datasets[0].label = 'Daily ' + graph_selection;
-                            myChart.data.datasets[0].backgroundColor = "rgb(103, 206, 127)";                                            
+                            myChart.data.datasets[0].label = 'Daily ' + graph_selection;                                          
                             myChart.data.datasets[0].borderColor= "rgb(33, 153, 61)";
                             
                             myChart.update();
@@ -245,8 +243,7 @@ $(document).ready(function(){
                         } else {
                             myChart.data.labels = xs;
                             myChart.data.datasets[0].data = ys;
-                            myChart.data.datasets[0].label = 'Total ' + graph_selection;
-                            myChart.data.datasets[0].backgroundColor = "rgb(122, 161, 173)";                                            
+                            myChart.data.datasets[0].label = 'Total ' + graph_selection;                                          
                             myChart.data.datasets[0].borderColor= "rgb(47, 72, 234)";                         
 
                            
