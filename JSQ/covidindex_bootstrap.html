@@ -19,17 +19,21 @@
 
         <div class="row">
             <div class="col-lg shadow-lg p-3 mb-5 bg-white rounded" id= "summary_choice" style="margin: 2.5%;">
-
-            <div class="container">
-               
-                <p>Country: </p>        
                 
         
-                <select id="country_selector">
+        
+            
+        
+            <div class="container">
+               
+                <p style="margin-bottom: 2%;">Country: </p>        
+                
+        
+                <select style="margin-bottom: 2%;" id="country_selector" >
                     
         
                 </select>
-                <p>Graph Type: </p>  
+                <p style="margin-bottom: 2%;">Graph Type: </p>  
                 <select id="graph_selector">
                 <option class='text-white bg-dark'>Confirmed Cases</option>
                 <option class='text-white bg-dark'>Deaths</option>
@@ -56,7 +60,16 @@
                     <div class="container" id="new_rc"></div>
                     <div class="container" id="total_rc"></div>
                 </div>
-
+                
+                
+                
+        
+                
+        
+        
+                
+        
+        
             </div>
 
 
@@ -69,6 +82,9 @@
                 <div class="card">
                     <div class="card-body">
                         <canvas id="myCanvas" class="container"></canvas>
+                        <div class="card-footer text-muted">
+                            Data was retrieved from https://api.covid19api.com/
+                          </div>
 
                     </div>
                 
@@ -79,7 +95,11 @@
         </div>
 
     </div>
+        
+       
 
+
+   
 
     <script type="text/javascript">
     
@@ -95,8 +115,7 @@ $(document).ready(function(){
                                             label: 'Total ',
                                             data: [],
                                             pointRadius: 0,
-                                            borderColor: "rgb(47, 72, 234)",
-                                                
+                                            borderColor: "rgb(47, 72, 234)",   
                                             borderWidth: 1
                                         }]
                                     },
@@ -243,7 +262,7 @@ $(document).ready(function(){
                         } else {
                             myChart.data.labels = xs;
                             myChart.data.datasets[0].data = ys;
-                            myChart.data.datasets[0].label = 'Total ' + graph_selection;                                          
+                            myChart.data.datasets[0].label = 'Total ' + graph_selection;                                           
                             myChart.data.datasets[0].borderColor= "rgb(47, 72, 234)";                         
 
                            
